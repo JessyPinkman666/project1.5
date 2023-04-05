@@ -1,0 +1,236 @@
+@font-face {
+  font-family: "TT Lakes";
+  src: local("TT Lakes Regular"), local("TT-Lakes-Medium"),
+    url("assets/fonts/TTLakes-Regular.woff") format("woff"),
+    url("assets/fonts/TTLakes-Regular.eot") format("eot"),
+    url("assets/fonts/TTLakes-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Lakes";
+  src: local("TT Lakes Medium"), local("TT-Lakes-Medium"),
+    url("assets/fonts/TTLakes-Medium.woff") format("woff"),
+    url("assets/fonts/TTLakes-Medium.eot") format("eot"),
+    url("assets/fonts/TTLakes-Medium.ttf") format("ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Lakes";
+  src: local("TT Lakes Bold"), local("TT-Lakes-Bold"),
+    url("assets/fonts/TTLakesCondensed-Bold.woff") format("woff"),
+    url("assets/fonts/TTLakesCondensed-Bold.eot") format("eot"),
+    url("assets/fonts/TTLakesCondensed-Bold.ttf") format("ttf");
+  font-weight: 700;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+* {
+  font-family: "TT Lakes", "Arial", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*header*/
+.section__header {
+  min-height: 80px;
+}
+
+.section__title {
+  font-weight: 400;
+  font-size: 16px;
+  padding: 16px;
+  text-transform: uppercase;
+  font-family: "TT Lakes", sans-serif;
+}
+
+/*мобильная*/
+.swiper-wrapper {
+  margin-bottom: 40px;
+  min-width: 0;
+  padding-top: 16px;
+}
+
+.section__swiper {
+  background-color: #f2f2f2;
+  width: 100%;
+}
+
+.section__swiper .swiper-slide {
+  width: 240px;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  line-height: 12px;
+  background-color: #b5b6bc;
+}
+/* карточка*/
+.brand__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 72px;
+  min-width: 240px;
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.brand__image {
+  line-height: 72px;
+}
+
+.brand__link {
+  width: 40px;
+  height: 40px;
+  background-image: url(assets/img/go.svg);
+}
+
+.brand__link:hover {
+  cursor: pointer;
+}
+
+.menu {
+  display: none;
+}
+
+.menu__btn {
+  border-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .section__swiper {
+    display: none;
+  }
+
+  /* padding-right: 24px;
+  padding-left: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  max-width: 1440px; */
+  .menu {
+    display: block;
+    padding-right: 24px;
+    padding-left: 24px;
+    background-color: #f2f2f2;
+    min-height: 90vh;
+    max-width: 1120px;
+  }
+
+  .menu__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+
+  .brand__item {
+    min-width: 224px;
+    margin-top: 16px;
+    margin-right: 24px;
+  }
+
+  .brand__item:nth-child(3n) {
+    margin-right: 24px;
+  }
+
+  .menu__more,
+  .menu__hide {
+    display: block;
+    box-sizing: border-box;
+    height: 40px;
+    font-family: "TT Lakes", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    margin-top: 24px;
+    padding-left: 21px;
+  }
+
+  .menu__more,
+  .menu__hide:hover {
+    cursor: pointer;
+  }
+
+  .menu__more::before {
+    content: url(assets/img/icon.svg);
+    position: absolute;
+    left: 5px;
+  }
+
+  .menu__hide::before {
+    content: url(assets/img/icon2.svg);
+    position: absolute;
+    left: 5px;
+  }
+
+  /* .menu .test{
+    display: none;
+  }
+
+  .brand__item:nth-child(7){
+    display: none;
+  }
+  .brand__item:nth-child(8){
+    display: none;
+  }
+  .brand__item:nth-child(9){
+    display: none;
+  }
+  .brand__item:nth-child(10){
+    display: none;
+  }
+  .brand__item:nth-child(11){
+    display: none;
+  } */
+}
+
+@media (min-width: 1120px) {
+  .brand__item {
+    min-width: 224px;
+  }
+
+  .menu .test {
+    display: block;
+  }
+  .menu {
+    padding-right: 24px;
+    padding-left: 24px;
+    display: block;
+  }
+  .menu__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+
+  .brand__item:nth-child(7) {
+    display: flex;
+  }
+  .brand__item:nth-child(8) {
+    display: flex;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
